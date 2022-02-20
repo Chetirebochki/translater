@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Переводчик</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<header class="container">
+            <h2 class='container-heading'><span class="heading_font">Переводчик "4 Бочки"</span></h2>
+	</header>
+		<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+				<textarea class='message-box' name="message" rows="5" cols="40" ></textarea><br/>
+				<input type="submit" class="my-cta-button" value="Перевести">
+				<form action="{{ url_for('predict_delete') }}" method="POST">
+				<input type="submit" class="my-cta-button" value="Удалить">
+        	</form>
+        	</form>
+    	</div>
+
+    	<div class="ml-container">
+			<textarea class='message-box'  rows="5" cols="40" readonly>{{prediction}}</textarea>
+		</div>
+</body>
+</html>
