@@ -11,9 +11,14 @@ def generate(text, **kwargs):
     with torch.no_grad():
         hypotheses = model.generate(**inputs, num_beams=5, **kwargs)
     return tokenizer.decode(hypotheses[0], skip_special_tokens=True)
+
 ruen='translate ru-en'
 enru='translate en-ru'
 sep=' | '
-text='Translate this please.'
-print(generate(
+text=get_text()
+if vybor.get_value()=='en-ru':
+ print(generate(
     enru+sep+text))
+if vybor.get_value()=='ru-en':
+ print(generate(
+    ruen+sep+text))
