@@ -1,4 +1,29 @@
 from flask import Flask, render_template, request
+import torch
+# from transformers import T5ForConditionalGeneration, T5Tokenizer
+# model_name = "cointegrated/rut5-base-multitask"
+# tokenizer = T5Tokenizer.from_pretrained(model_name)
+# model = T5ForConditionalGeneration.from_pretrained(model_name)
+# def generate(text, **kwargs):
+#     inputs = tokenizer(text, return_tensors='pt')
+#     with torch.no_grad():
+#         hypotheses = model.generate(**inputs, num_beams=5, **kwargs)
+#     return tokenizer.decode(hypotheses[0], skip_special_tokens=True)
+# ruen='translate ru-en'
+# enru='translate en-ru'
+# sep=' | '
+# text='hello, my dear friend'
+from transformers import FSMTForConditionalGeneration, FSMTTokenizer
+
+mname = "facebook/wmt19-ru-en"
+tokenizer = FSMTTokenizer.from_pretrained(mname)
+model = FSMTForConditionalGeneration.from_pretrained(mname)
+
+def generate(text):
+    input_ids = tokenizer.encode(text, return_tensors="pt")
+    outputs = model.generate(input_ids)
+    decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return decoded
 
 app = Flask(__name__)
 
@@ -11,8 +36,8 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     message = request.form['message']
-    text = message.lower()
-    return render_template('index.html', prediction=text)
+    trans=generate(message)
+    return render_template('index.html', prediction=trans)
 
 
 @app.route('/predict_delete', methods=['POST'])
