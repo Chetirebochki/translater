@@ -1,51 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 html{
 	height: 100%;
 	margin: 0;
 }
 
 body{
-	font-family: Arial, Helvetica,sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	background: linear-gradient(45deg, gold, brown, pink, purple, aqua, orangered);
-	background-size: 500% 500%;
-	animation: change-gradient 10s ease-in-out infinite;
+    background: #3B828B;
 }
 
+.main{
+	display: flex;
+}
 
 .container{
+    text-align: center;
 	padding: 18px;
-	background: linear-gradient(45deg, red, green, blue, yellow, black, gray);
-	background-size: 500% 500%;
-	animation: change-gradient 10s ease-in-out infinite;
-}
 
-@keyframes change-gradient {
-	0%{
-		background-position: 0 50%;
-	}
-	50%{
-		background-position: 100% 50%;
-	}
-	100%{
-		background-position: 0 50%;
-	}
 }
 
 
 .heading_font{
     color: aqua;
-	font-family: 'Yatra One', cursive;
-	font-size: 24px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 80px;
 }
 
 
 .ml-container{
+    text-align: center;
     margin: 30px 0;
 	flex: 1 0 auto;
 }
@@ -53,28 +35,45 @@ body{
 .message-box{
     margin-bottom: 20px;
 	font-size: 24px;
+    width: 600px;
+    height: 300px;
+    left: 178px;
+    top: 256px;
+    resize: none;
+}
+
+.btn-delete{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 1280px;
+    bottom: 435px;
+    border-radius: 50px;
+    transition: transform .3s;
+}
+
+.btn-delete:hover{
+    color: red;
+    transform: scale(1.2);
+
+
 }
 
 .my-cta-button{
-	margin: 15px;
-    background: #f9f9f9;
-    border: 2px solid #000000;
-    border-radius: 1000px;
-    box-shadow: 3px 3px #8c8c8c;
-    padding: 30px 36px;
-    color: #000000;
-    display: inline-block;
-    font: italic bold 20px "Calibri", sans-serif;
+    font-family: 'Indie Flower', cursive;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    padding: 30px 30px;
     text-align: center;
+    font-size: 24px;
+    transition: transform .3s;
 }
 
 .my-cta-button:hover{
-    color: #4d089a;
-    border: 2px solid #4d089a;
-}
-
-.my-cta-button:active{
-    box-shadow: 0 0;
+    color: black;
+    background: white;
+    transform: scale(1.2);
 }
 
 
