@@ -50,6 +50,7 @@ body{
     bottom: 435px;
     border-radius: 50px;
     transition: transform .3s;
+	border-color: black;
 }
 
 .btn-delete:hover{
@@ -68,6 +69,7 @@ body{
     text-align: center;
     font-size: 24px;
     transition: transform .3s;
+	border-color: black;
 }
 
 .my-cta-button:hover{
