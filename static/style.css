@@ -92,8 +92,9 @@ body{
     width: 500px;
     height: 200px;
     resize: none;
-    border: solid black;
+    border: 5px double greenyellow;
     border-radius: 25px;
+
 }
 
 .btn-delete{
@@ -137,6 +138,6 @@ body{
 }
 
 .text_area_div{
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
