@@ -70,14 +70,21 @@ body{
 }
 
 .select{
-    font-size: 24px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
     background: aqua;
+    border: 2px solid black;
+    border-radius: 50px;
+    transition: transform .2s;
+
 }
 
 .select:hover{
     cursor: pointer;
-    background: green;
+    transform: scale(1.1);
 }
+
+
 
 .message-box{
     margin-bottom: 20px;
@@ -85,6 +92,8 @@ body{
     width: 500px;
     height: 200px;
     resize: none;
+    border: solid black;
+    border-radius: 25px;
 }
 
 .btn-delete{
