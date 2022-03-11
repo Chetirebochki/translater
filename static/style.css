@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&display=swap');
 /*Отключение стилей браузера*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -47,14 +47,23 @@ table {
 
 /*Шаблон*/
 body{
-    background: #3B828B;
+    background: #024C68;
+    width: 1600px;
+    margin: 0 auto;
+
 }
+
+textarea{
+    padding-top: 5px;
+    padding-left: 5px;
+}
+textarea:active {outline:none;}
+:focus {outline:none;}
+
 .header{
     padding-top: 10px;
-    background: black;
-    width: 100%;
     text-align: center;
-    color: aqua;
+    color: #62B1D0;
     font-family: 'Indie Flower', cursive;
     font-size: 80px;
     font-weight: bold;
@@ -62,11 +71,14 @@ body{
     margin-bottom: 50px;
 }
 
+.wrapper{
+    max-width: 1600px;
+    width: 90%;
+    margin: 0 auto;
+}
+
 .main{
 	display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-
 }
 
 .select{
@@ -93,9 +105,8 @@ body{
     resize: none;
     border: 5px solid black;
     border-radius: 20px;
-
-
 }
+
 
 
 .btn-delete{
@@ -105,7 +116,7 @@ body{
     border-radius: 50px;
     transition: transform .3s;
     border-color: black;
-    bottom: 200px;
+    bottom: 205px;
     right: 50px;
 }
 
@@ -115,9 +126,12 @@ body{
     cursor: pointer;
 }
 
+.btn-delete:active{
+    transform: scale(0.95);
+}
+
 .btn_post{
-    /*font-family: 'Indie Flower', cursive;*/
-    font-family: 'Comforter Brush', cursive;
+    font-family: 'Amatic SC', cursive;
     font-size: 50px;
     background: black;
     color: white;
@@ -134,9 +148,11 @@ body{
     transform: scale(1.2);
     cursor: pointer;
 }
+.btn_post:active{
+    transform: scale(0.95);
+}
 .container{
     margin: 0 auto;
-
 }
 
 .text_area_div{
