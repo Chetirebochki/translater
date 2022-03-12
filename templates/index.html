@@ -25,11 +25,12 @@
 			<div class="container">
 				<form action="{{ url_for('predict') }}" id="form_select" method="POST">
 					<div class="text_area_div">
-						<textarea class='message-box' placeholder="Введите текст для перевода" name="message">{{text_pred}}</textarea><br/>
+						<textarea id="area_post" class='message-box' placeholder="Введите текст для перевода" name="message">{{text_pred}}</textarea>
+						<br/>
 						<input type="submit" class="btn_post" value="Перевести">
 					</div>
-
 				</form>
+				<button id="btn_post_delete" class="btn-delete-post" title="Очистить"><i class="bi bi-x-lg"></i></button>
 			</div>
 			<div class="container">
 				<select name="select" form="form_select" class="select">
@@ -39,13 +40,22 @@
 				</select>
 			</div>
 			<div class="container">
-				<form action="{{ url_for('predict_delete') }}" method="POST">
-					<textarea class='message-box' name="predict" readonly>{{prediction}}</textarea>
-					<button class="btn-delete" title="Очистить"><i class="bi bi-x-lg"></i></button>
-				</form>
+				<div><textarea class='message-box' id="area_translate" name="predict" readonly>{{prediction}}</textarea></div>
+				<button class="btn-delete" id="btn_delete" title="Очистить"><i class="bi bi-x-lg"></i></button>
 			</div>
-	</div>
-	</div>
 
+		</div>
+	</div>
+<script>
+	document.getElementById("btn_delete").onclick = function ()
+	{
+		document.getElementById("area_translate").value  = "";
+	};
+	document.getElementById("btn_post_delete").onclick = function ()
+	{
+		document.getElementById("area_post").value = "";
+		document.getElementById("area_translate").value = "";
+	}
+</script>
 </body>
 </html>
