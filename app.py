@@ -49,7 +49,7 @@ def predict():
        string = ruen
     message = request.form['message']
     trans = generate(string + sep + message)
-    return render_template('index.html', prediction=trans)
+    return render_template('index.html', prediction=trans, text_pred=message)
 
 
 @app.route('/predict_delete', methods=['POST'])
