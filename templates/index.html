@@ -25,7 +25,7 @@
 			<div class="container">
 				<form action="{{ url_for('predict') }}" id="form_select" method="POST">
 					<div class="text_area_div">
-						<textarea class='message-box' name="message"></textarea><br/>
+						<textarea class='message-box' placeholder="Введите текст для перевода" name="message">{{text_pred}}</textarea><br/>
 						<input type="submit" class="btn_post" value="Перевести">
 					</div>
 
