@@ -44,12 +44,14 @@ table {
 	border-spacing: 0;
 }
 
-
 /*Шаблон*/
 body{
-    background: #024C68;
-    width: 1600px;
+    background-image: url('/static/img/bg1.jpg');
+    background-repeat: no-repeat;
+    width: 1400px;
     margin: 0 auto;
+    background-size: cover;
+    background-attachment: fixed;
 
 }
 
@@ -62,18 +64,18 @@ textarea:active {outline:none;}
 
 .header{
     padding-top: 10px;
-    text-align: center;
-    color: #62B1D0;
+    color: #6EB5C0;
     font-family: 'Indie Flower', cursive;
     font-size: 80px;
     font-weight: bold;
     height: 100px;
-    margin-bottom: 50px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 .wrapper{
-    max-width: 1600px;
-    width: 90%;
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -84,7 +86,7 @@ textarea:active {outline:none;}
 .select{
     font-family: 'Indie Flower', cursive;
     font-size: 22px;
-    background: aqua;
+    background: #FFCCBB;
     border: 2px solid black;
     border-radius: 50px;
     transition: transform .2s;
@@ -98,6 +100,7 @@ textarea:active {outline:none;}
 
 
 .message-box{
+    background: #E2E8E4;
     margin-bottom: 20px;
 	font-size: 24px;
     width: 500px;
@@ -105,6 +108,7 @@ textarea:active {outline:none;}
     resize: none;
     border: 5px solid black;
     border-radius: 20px;
+    opacity: 0.5;
 }
 
 
@@ -133,8 +137,9 @@ textarea:active {outline:none;}
 .btn_post{
     font-family: 'Amatic SC', cursive;
     font-size: 50px;
-    background: black;
-    color: white;
+    font-weight: bold;
+    background: #FFCCBB;
+    color: black;
     border-radius: 50px;
     border-color: black;
     padding: 30px 30px;
@@ -143,8 +148,7 @@ textarea:active {outline:none;}
 }
 
 .btn_post:hover{
-    color: black;
-    background: white;
+    background: #E2E8E4;
     transform: scale(1.2);
     cursor: pointer;
 }
