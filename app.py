@@ -51,11 +51,5 @@ def predict():
     trans = generate(string + sep + message)
     return render_template('index.html', prediction=trans, text_pred=message)
 
-
-@app.route('/predict_delete', methods=['POST'])
-def predict_delete():
-    return render_template('index.html', prediction="")
-
-
 if __name__ == '__main__':
     app.run(debug=True)
