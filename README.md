@@ -1,4 +1,11 @@
-<img  src="./picture/bdr4.jpg" >
+
+<div id="tekst_sverhu_kartinki">
+
+<img  src="./picture/bdr4.jpg" > alt="Переводчик">
+
+<div class="tekst_sverhu_kartinki">Переводчик</div>
+
+</div>
 <h1 align="center">Переводчик</h1>
 
 <h1 align="center">Описание</h1>
