@@ -1,9 +1,9 @@
 
-<div id="tekst_sverhu_kartinki">
 
-<img  src="./picture/bdr4.jpg" > alt="Переводчик">
 
-<div class="tekst_sverhu_kartinki">Переводчик</div>
+<h2><pre><img  src="./picture/bdr4.jpg" >Новости</a> </h2>
+
+
 
 </div>
 <h1 align="center">Переводчик</h1>
