@@ -1,3 +1,4 @@
+<img  src="./picture/bdr4.jpg" >
 <h1 align="center">Переводчик</h1>
 
 <h1 align="center">Описание</h1>
