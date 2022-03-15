@@ -1,12 +1,24 @@
 
 
-
-<img  src="./picture/bdr4.jpg" >
-
+<p align="center">
+<img  src="./picture/bdr4.jpg" width="50%" >
+</p>
 
 
 </div>
 <h1 align="center">Переводчик</h1>
+
+<p align="center">
+<img src="https://img.shields.io/badge/made%20by-4%20bochki-red">
+
+<img src="https://img.shields.io/badge/language-python-green">
+
+<img src="https://img.shields.io/badge/beer-%E2%9D%A4-yellow">
+
+<img src="https://img.shields.io/badge/code-Open%20source-orange">
+ 
+ <img src="https://img.shields.io/badge/easy%20to%20use-ʕ•ᴥ•ʔ-blue">
+</p>
 
 <h1 align="center">Описание</h1>
 
@@ -18,21 +30,25 @@
 
 <img  src="./picture/p1.png" >
 
-Также рядом с этим полем есть всплывающее меню с выбором языка
+Также рядом с этим полем есть всплывающее меню с выбором языка, в котором пока доступно только два пункта
 
 <img  src="./picture/p2.png" >
 
 ## Использованные инструменты
 
 - Фронт и бэк : Flask, css, html
-- Ml инструменты : torch,готовая модель для перевода текста от автора:"cointegrated" ссылка на его Habr: https://habr.com/ru/users/cointegrated/
+- Ml инструменты : torch, готовая модель для перевода текста от автора: ["cointegrated"](https://habr.com/ru/users/cointegrated/)
 - Дизайн: подбор сочетаний цветов на сайтах, выбор картинки из интернета и собственное мнение
 
  
   
 ## Как установить
 
-...
+```
+pip install flask
+pip install torch
+pip install transformers
+```
 
 ## Планы на будущее
 
