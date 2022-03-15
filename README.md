@@ -1,7 +1,7 @@
 
 
 
-<h2><pre><img  src="./picture/bdr4.jpg" >Новости</a> </h2>
+<img  src="./picture/bdr4.jpg" >
 
 
 
