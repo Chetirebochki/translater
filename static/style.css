@@ -64,18 +64,21 @@ textarea:active {outline:none;}
 
 .header{
     padding-top: 10px;
-    color: #6EB5C0;
     font-family: 'Indie Flower', cursive;
-    font-size: 100px;
+    font-size: 85px;
     font-weight: bold;
     height: 100px;
     padding-bottom: 30px;
     text-align: center;
-    text-shadow: -2px -2px 0 #4D4644, 2px -2px 0 #4D4644, -2px 2px 0 #4D4644, 2px 2px 0 #4D4644, 4px 4px 0 white, 5px 5px 0 white, 6px 6px 0 white, 7px 7px 0 aqua;
+    text-shadow: -2px -2px 0 #4D4644, 2px -2px 0 #4D4644, -2px 2px 0 #4D4644, 2px 2px 0 #4D4644, 4px 4px 0 white, 5px 5px 0 white, 6px 6px 0 white, 7px 7px 0 aqua, 10px 10px 0 aqua;
 }
 
+.main_page{
+    color: #6EB5C0;
+    text-decoration: none;
+}
 .wrapper{
-    max-width: 1366px;
+
     width: 100%;
     margin: 0 auto;
 }
@@ -86,7 +89,7 @@ textarea:active {outline:none;}
 
 .select{
     font-family: 'Indie Flower', cursive;
-    font-size: 22px;
+    font-size: 20px;
     background: #FFCCBB;
     border: 2px solid black;
     border-radius: 50px;
@@ -112,6 +115,7 @@ textarea:active {outline:none;}
     opacity: 0.8;
     font-weight: 900;
     color: white;
+    padding-right: 40px;
 }
 
 .btn-delete{
@@ -122,7 +126,7 @@ textarea:active {outline:none;}
     transition: transform .3s;
     border-color: black;
     bottom: 235px;
-    left: 469px;
+    left: 510px;
 }
 
 .btn-delete:hover{
@@ -144,7 +148,7 @@ textarea:active {outline:none;}
     transition: transform .3s;
     border-color: black;
     bottom: 360px;
-    left: 470px;
+    left: 510px;
 }
 
 .btn-delete-post:hover{
