@@ -6,34 +6,36 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Переводчик</title>
-	
+
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
-
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon-1.ico') }}">
 </head>
 <body>
 	<header class="header">
 		<div class="wrapper">
 			<div class="header_logo_text">
-				<i class="bi bi-translate"></i>Translator
+				<a class="main_page" href="/">
+					<i class="bi bi-translate"></i>Translator
+				</a>
 			</div>
 		</div>
 	</header>
 	<div class="wrapper">
 		<div class="main">
 			<div class="container">
-				<form action="{{ url_for('predict') }}" id="form_select" method="POST">
+				<form action="{{ url_for('predict') }}" id="form_select" onsubmit="submitForm()" method="POST">
 					<div class="text_area_div">
 						<textarea id="area_post" class='message-box' placeholder="Введите текст для перевода" name="message">{{text_pred}}</textarea>
 						<br/>
-						<input type="submit" class="btn_post" value="Перевести">
+						<input type="submit" class="btn_post" title="Нажмите, чтобы перевести ваш текст" value="Перевести">
 					</div>
 				</form>
 				<button id="btn_post_delete" class="btn-delete-post" title="Очистить"><i class="bi bi-x-lg"></i></button>
 			</div>
 			<div class="container">
-				<select name="select" form="form_select" class="select">
+				<select id="select" name="select" form="form_select" class="select" title="Выберите язык перевода">
 					<option disabled>Выберите язык</option>
 					<option value="Russian">Английский-Русский</option>
 					<option value="English">Русский-Английский</option>
@@ -55,7 +57,17 @@
 	{
 		document.getElementById("area_post").value = "";
 		document.getElementById("area_translate").value = "";
-	}
+	};
+
+	document.addEventListener('DOMContentLoaded', function(){
+	let item = localStorage.getItem('select');
+	let select = document.getElementById("select");
+	select.value = item;
+	});
+	function submitForm(){
+	let select = document.getElementById("select");
+	let value = select.options[select.selectedIndex].value;
+	localStorage.setItem('select', value);}
 </script>
 </body>
 </html>
