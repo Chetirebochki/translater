@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from app import generate
+from app import generate, predict
 import torch
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 
@@ -18,6 +18,9 @@ class UnitTests(TestCase):
 
     def test_enru_translation(self):
         self.assertEqual(generate(enru + sep + 'Hello'), 'Привет')
+
+    def test_lang(self):
+        self.assertTrue(predict, 'Привет')
 
 
 if __name__ == '__main__':
