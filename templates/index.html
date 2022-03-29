@@ -6,9 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Переводчик</title>
-
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon-1.ico') }}">
 </head>
@@ -27,7 +25,7 @@
 			<div class="container">
 				<form action="{{ url_for('predict') }}" id="form_select" onsubmit="submitForm()" method="POST">
 					<div class="text_area_div">
-						<textarea id="area_post" class='message-box' placeholder="Введите текст для перевода" name="message">{{text_pred}}</textarea>
+						<textarea id="area_post" class='message-box'  placeholder="Введите текст для перевода" name="message">{{text_pred}}</textarea>
 						<br/>
 						<input type="submit" class="btn_post" title="Нажмите, чтобы перевести ваш текст" value="Перевести">
 					</div>
@@ -42,12 +40,42 @@
 				</select>
 			</div>
 			<div class="container">
-				<div><textarea class='message-box' id="area_translate" name="predict" readonly>{{prediction}}</textarea></div>
+				<div>
+					<textarea class='message-box' id="area_translate" name="predict" readonly>{{prediction}}</textarea>
+				</div>
 				<button class="btn-delete" id="btn_delete" title="Очистить"><i class="bi bi-x-lg"></i></button>
 			</div>
-
 		</div>
 	</div>
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="photo">
+				<a href="https://vk.com/v.mostovik" class="photo_link" target="_blank">
+					<img src="/static/img/photo_vlad.svg" alt="" class="photo_img">
+					<p>Team Lead</p>
+					<p>Владислав</p>
+				</a>
+				<a href="https://vk.com/vasiliym23" class="photo_link" target="_blank">
+					<img src="/static/img/photo_vasya.svg" alt="" class="photo_img">
+					<p>Developer</p>
+					<p>Василий</p>
+				</a>
+				<a href="https://vk.com/callmet" class="photo_link" target="_blank">
+					<img src="/static/img/photo_teamur.svg" alt="" class="photo_img">
+					<p>Designer</p>
+					<p>Тимур</p>
+				</a>
+				<a href="https://vk.com/daniilishche" class="photo_link" target="_blank">
+					<img src="/static/img/photo_danil.svg" alt="" class="photo_img">
+					<p>Scrum Master</p>
+					<p>Даниил</p>
+				</a>
+			</div>
+		</div>
+	</footer>
+
+
+
 <script>
 	document.getElementById("btn_delete").onclick = function ()
 	{
